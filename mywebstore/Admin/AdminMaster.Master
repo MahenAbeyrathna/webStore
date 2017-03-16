@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs" Inherits="mywebstore.Admin.AdminMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form2" runat="server">
+    <table style="width:900px;align-self:center">
+        <tr>
+            <td>
+                <table style="border-bottom-style=ridge;border-width:medium;width:900px; border-color:#9933FF ">
+                    <tr>
+                        <td style="text-align:center">
+                            <asp:Image ID="Image1"  runat="server" Height="70px" ImageUrl="~/Images/cart.png"/>
+                       &nbsp;
+                         </td>
+                        <td style="text-align:center" >
+                            <asp:LinkButton ID="lbllogo" runat="server" Text="Shopping Cart" Font-Names="Eras Demi ITC" Font-Size="20pt" ForeColor="#6600cc" OnClick="lbllogo_Click"></asp:LinkButton>
+                            <br />
+                            For Those Who Love Shopping...!!
+                        </td>
+                        <td style="text-align:center">
+                            <asp:Image ID="Image2" runat="server" Height="81px" ImageUrl="~/Images/admin.png" Width="109px"/>
+                        </td>
+                       </tr>
+                </table>
+            </td>
+           
+        </tr>
+        <tr>
+            <td >
+                <table style="border:thin ridge #9900ff;width:900px">
+                    <tr>
+                        <td class="style2">
+                            <a href="AddEditCategory.aspx"> Category</a> &nbsp; 
+                            <a href="AddNewProducts.aspx">Products</a> &nbsp; 
+                            <a href="#">CustomerOders</a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td >
+                <table style="border:1px ridge #000000;width:900px">
+                    <tr>
+                        <td  >
+                            <asp:Panel ID="pnlCategories" runat="server">
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+                            </asp:Panel>
+                        </td> 
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+        <tr>
+           <td colspan="2" style="text-align:center">
+               &nbsp;&nbsp; mahens.com
+           </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
